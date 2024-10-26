@@ -1,0 +1,27 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+img.avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4CAF50;
+}

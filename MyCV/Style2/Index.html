@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio và CV - Anh Nguyen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <img src="avatar.jpg" alt="Anh Nguyen Avatar" class="rounded-circle mb-3" width="150" height="150">
+            <h1>Anh Nguyen</h1>
+            <p>Lập trình viên phần mềm</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Kỹ năng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Dự án</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#WebAppDemo">WebApp Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Giới thiệu</h2>
+            <p class="text-center">Xin chào! Tôi là Anh Nguyen, một lập trình viên phần mềm với hơn 9 năm kinh nghiệm làm việc tại Việt Nam và Hoa Kỳ. Tôi đam mê phát triển phần mềm và các công nghệ tiên tiến.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Kỹ năng</h2>
+            <div class="row text-center">
+
+                <div class="col-md-4 mb-3">
+                    <i class="fab fa-c fa-3x text-primary"></i>
+                    <p>C#.NET</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="fab fa-java fa-3x text-success"></i>
+                    <p>Java</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="fas fa-python fa-3x text-secondary"></i>
+                    <p>Python</p>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <i class="fab fa-html5 fa-3x text-primary"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="fab fa-css3-alt fa-3x text-info"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="fab fa-js fa-3x text-warning"></i>
+                    <p>JavaScript</p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <i class="fab fa-react fa-3x text-primary"></i>
+                    <p>React</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="fab fa-node fa-3x text-success"></i>
+                    <p>Node.js</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="fas fa-database fa-3x text-secondary"></i>
+                    <p>SQL</p>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Dự án</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Website bán hàng</h5>
+                            <p class="card-text">Một trang web thương mại điện tử sử dụng React và Node.js cho phép người dùng mua sắm trực tuyến.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ứng dụng quản lý công việc</h5>
+                            <p class="card-text">Ứng dụng giúp quản lý và theo dõi tiến độ công việc hàng ngày. Xây dựng với Vue.js và Firebase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Liên hệ</h2>
+            <form id="contact-form" class="w-75 mx-auto">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Tên của bạn:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Tin nhắn:</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Gửi</button>
+            </form>
+            <div id="form-message" class="text-center mt-3"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Anh Nguyen - All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
