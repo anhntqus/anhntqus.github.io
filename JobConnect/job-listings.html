@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Job Listings</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Job Opportunities</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="job-listings.html">Job Listings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container text-center">
+            <h1 class="display-4">Connecting US Companies with Vietnamese Talent</h1>
+            <p class="lead">Explore tailored job opportunities and elevate your career.</p>
+            
+        </div>
+    </header>
+
+
+
+
+
+    <div class="container mt-5">
+        <h2>Available Job Listings</h2>
+        <input type="text" id="search" class="form-control mb-3" placeholder="Search jobs...">
+        <div id="job-listings" class="row"></div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <br>
+    <br>
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Remote Job Opportunities. All rights reserved.</p>
+            <p>Follow us on social media: 
+               <a href="https://www.facebook.com/anhntq.us/" class="text-white">Facebook</a> | 
+               <a href="#" class="text-white">Twitter</a> | 
+               <a href="#" class="text-white">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        // Dữ liệu mẫu trong localStorage
+        const jobs = JSON.parse(localStorage.getItem('jobs')) || [
+            {
+                title: "Dispatch Operations Specialist, Remote Gate Management (RGM)",
+                company: "Amazon.com Services LLC",
+                location: "Remote"
+            },
+            {
+                title: "General Manager Assistant, Worldwide Operations",
+                company: "Amazon.com Services LLC",
+                location: "Remote"
+            },
+            {
+                title: "Administrative Support , Device Management Team",
+                company: "Amazon.com Services LLC",
+                location: "Remote"
+            },
+            {
+                title: "Software Engineer",
+                company: "Google",
+                location: "Mountain View, CA"
+            },
+            {
+                title: "Data Analyst",
+                company: "Facebook",
+                location: "New York, NY"
+            },
+            {
+                title: "Product Manager",
+                company: "Apple",
+                location: "Cupertino, CA"
+            }
+        ];
+
+        // Hàm hiển thị công việc
+        function displayJobs() {
+            const jobListings = document.getElementById('job-listings');
+            jobListings.innerHTML = '';  // Xóa nội dung cũ
+
+            jobs.forEach(job => {
+                // Tạo HTML cho mỗi công việc
+                const jobDiv = document.createElement('div');
+                jobDiv.className = 'col-md-4 mb-4';  // Đảm bảo chia đều 3 cột trên màn hình lớn
+                jobDiv.innerHTML = `
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${job.title}</h5>
+                            <p class="card-text">${job.company}</p>
+                            <p class="card-text">Location: ${job.location}</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                `;
+
+                // Thêm công việc vào danh sách
+                jobListings.appendChild(jobDiv);
+            });
+        }
+
+        // Hiển thị các công việc khi trang tải lần đầu
+        displayJobs();
+    </script>
+</body>
+</html>

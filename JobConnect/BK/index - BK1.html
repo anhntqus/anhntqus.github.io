@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connecting US Companies with Vietnamese Remote Workers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            margin-bottom: 20px;
+            border-radius: 0.5rem;
+        }
+        .section {
+            padding: 40px 0;
+        }
+        .language-toggle {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="container language-toggle">
+        <button id="toggle-en" class="btn btn-primary">English</button>
+        <button id="toggle-vi" class="btn btn-info">Tiếng Việt</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">ConnectVN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div id="home" class="jumbotron text-center">
+        <h1 class="en">Connecting US Companies with Vietnamese Talent</h1>
+        <h1 class="vi" style="display:none;">Kết nối công ty Mỹ với nhân tài Việt Nam</h1>
+        <p class="en">We provide a seamless connection between US businesses and skilled remote workers in Vietnam.</p>
+        <p class="vi" style="display:none;">Chúng tôi cung cấp sự kết nối liền mạch giữa các doanh nghiệp Mỹ và những lao động từ xa có kỹ năng tại Việt Nam.</p>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="section container">
+        <h2 class="text-center en">Our Services</h2>
+        <h2 class="text-center vi" style="display:none;">Dịch Vụ Của Chúng Tôi</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title en">Talent Sourcing</h5>
+                        <h5 class="card-title vi" style="display:none;">Tìm Kiếm Nhân Tài</h5>
+                        <p class="card-text en">We help you find the right talent for your specific needs.</p>
+                        <p class="card-text vi" style="display:none;">Chúng tôi giúp bạn tìm kiếm nhân tài phù hợp với nhu cầu cụ thể của bạn.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title en">Project Management</h5>
+                        <h5 class="card-title vi" style="display:none;">Quản Lý Dự Án</h5>
+                        <p class="card-text en">We provide project management services to ensure your projects succeed.</p>
+                        <p class="card-text vi" style="display:none;">Chúng tôi cung cấp dịch vụ quản lý dự án để đảm bảo dự án của bạn thành công.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title en">Training and Support</h5>
+                        <h5 class="card-title vi" style="display:none;">Đào Tạo và Hỗ Trợ</h5>
+                        <p class="card-text en">We offer training and support for both clients and workers.</p>
+                        <p class="card-text vi" style="display:none;">Chúng tôi cung cấp đào tạo và hỗ trợ cho cả khách hàng và người lao động.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="en">About Us</h2>
+            <h2 class="vi" style="display:none;">Về Chúng Tôi</h2>
+            <p class="en">ConnectVN is dedicated to bridging the gap between US companies and skilled professionals in Vietnam, ensuring quality service and effective communication.</p>
+            <p class="vi" style="display:none;">ConnectVN cam kết kết nối giữa các công ty Mỹ và các chuyên gia có tay nghề tại Việt Nam, đảm bảo dịch vụ chất lượng và giao tiếp hiệu quả.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section container">
+        <h2 class="text-center en">Contact Us</h2>
+        <h2 class="text-center vi" style="display:none;">Liên Hệ Với Chúng Tôi</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label en">Name</label>
+                <label for="name" class="form-label vi" style="display:none;">Tên</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label en">Email</label>
+                <label for="email" class="form-label vi" style="display:none;">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label en">Message</label>
+                <label for="message" class="form-label vi" style="display:none;">Tin Nhắn</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary en">Submit</button>
+            <button type="submit" class="btn btn-info vi" style="display:none;">Gửi</button>
+        </form>
+    </div>
+
+    <footer class="text-center py-4">
+        <p class="en">&copy; 2024 ConnectVN. All Rights Reserved.</p>
+        <p class="vi" style="display:none;">&copy; 2024 ConnectVN. Bản quyền thuộc về chúng tôi.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("toggle-en").onclick = function() {
+            var elements = document.querySelectorAll('.en');
+            var elementsVi = document.querySelectorAll('.vi');
+            elements.forEach(el => el.style.display = 'block');
+            elementsVi.forEach(el => el.style.display = 'none');
+        };
+
+        document.getElementById("toggle-vi").onclick = function() {
+            var elements = document.querySelectorAll('.en');
+            var elementsVi = document.querySelectorAll('.vi');
+            elements.forEach(el => el.style.display = 'none');
+            elementsVi.forEach(el => el.style.display = 'block');
+        };
+    </script>
+</body>
+</html>

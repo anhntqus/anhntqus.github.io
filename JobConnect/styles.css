@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Font chữ theo phong cách Apple */
+}
+
+.hero {
+    background: url('panel.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Căn giữa nội dung */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem; /* Kích thước chữ lớn */
+    font-weight: 600; /* Đậm chữ */
+    margin-bottom: 10px; /* Khoảng cách dưới cùng */
+}
+
+.hero p {
+    font-size: 1.25rem; /* Kích thước chữ cho đoạn mô tả */
+    margin-bottom: 20px; /* Khoảng cách dưới cùng */
+}
+
+.hero .btn {
+    background-color: #007aff; /* Màu xanh lam đặc trưng của Apple */
+    color: white; /* Màu chữ trên nút */
+    padding: 10px 20px; /* Padding cho nút */
+    font-size: 1rem; /* Kích thước chữ cho nút */
+    border: none; /* Không có đường viền */
+    border-radius: 30px; /* Bo tròn các góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và phóng to */
+}
+
+.hero .btn:hover {
+    background-color: #0051a8; /* Màu xanh lam đậm khi hover */
+    transform: translateY(-2px); /* Nâng nút khi hover */
+}
+
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
