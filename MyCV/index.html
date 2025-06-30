@@ -29,6 +29,24 @@
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
+      /* --- New: Avatar Styles --- */
+      .avatar-container {
+        width: 120px; /* Kích thước container ảnh đại diện */
+        height: 120px;
+        border-radius: 50%; /* Biến hình tròn */
+        overflow: hidden; /* Cắt bỏ phần thừa của ảnh */
+        margin: 0 auto 20px; /* Căn giữa và tạo khoảng cách dưới */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Tạo bóng đổ đẹp mắt */
+        border: 4px solid white; /* Viền trắng nổi bật */
+        display: block; /* Đảm bảo căn giữa hoạt động */
+      }
+      .avatar-container img {
+        width: 100%; /* Ảnh lấp đầy container */
+        height: 100%;
+        object-fit: cover; /* Đảm bảo ảnh không bị méo và phủ kín */
+        display: block; /* Loại bỏ khoảng trống dưới ảnh */
+      }
+      /* --- End New: Avatar Styles --- */
       .section-title {
         font-size: 1.8rem;
         border-bottom: 2px solid #007bff;
@@ -148,6 +166,9 @@
 
     <header class="header">
       <div class="container">
+        <div class="avatar-container">
+          <img src="./Anh.jpg" alt="Your Avatar" class="img-fluid" />
+        </div>
         <h1 class="display-5 fw-bold">Anh Nguyen</h1>
         <p class="lead">Full Stack Developer</p>
       </div>
@@ -300,13 +321,7 @@
           Send Email
         </button>
 
-        <p class="mt-3 mb-0">
-          <strong>
-            <i class="fab fa-linkedin"></i>
-            Linkedin:
-          </strong>
        
-        </p>
       </div>
 
       <div id="appDemo" class="card-custom">
