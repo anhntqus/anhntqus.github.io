@@ -8,11 +8,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f4f6f9;
-        padding-top: 55px;
+        padding-top: 55px; /* Space for fixed navbar */
+        padding-bottom: 70px; /* Space for fixed footer */
       }
       .navbar-brand {
         font-weight: bold;
@@ -24,6 +29,24 @@
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
+      /* --- New: Avatar Styles --- */
+      .avatar-container {
+        width: 120px; /* Kích thước container ảnh đại diện */
+        height: 120px;
+        border-radius: 50%; /* Biến hình tròn */
+        overflow: hidden; /* Cắt bỏ phần thừa của ảnh */
+        margin: 0 auto 20px; /* Căn giữa và tạo khoảng cách dưới */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Tạo bóng đổ đẹp mắt */
+        border: 4px solid white; /* Viền trắng nổi bật */
+        display: block; /* Đảm bảo căn giữa hoạt động */
+      }
+      .avatar-container img {
+        width: 100%; /* Ảnh lấp đầy container */
+        height: 100%;
+        object-fit: cover; /* Đảm bảo ảnh không bị méo và phủ kín */
+        display: block; /* Loại bỏ khoảng trống dưới ảnh */
+      }
+      /* --- End New: Avatar Styles --- */
       .section-title {
         font-size: 1.8rem;
         border-bottom: 2px solid #007bff;
@@ -42,10 +65,63 @@
       .skills-list {
         padding-left: 1rem;
       }
+      /* Custom styles for the textarea and button */
+      .contact-form-group {
+        margin-bottom: 1rem;
+      }
+      .contact-textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        min-height: 120px; /* Adjust height as needed */
+        resize: vertical; /* Allow vertical resizing */
+      }
+      .btn-send-email {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .btn-send-email:hover {
+        background-color: #0056b3;
+      }
+
+      /* Fixed Footer Styles */
+      .footer {
+        background-color: #343a40; /* Dark background similar to navbar */
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        position: fixed; /* Fixed at the bottom */
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for separation */
+        z-index: 1030; /* Ensure it stays above other content */
+      }
+      .footer a {
+        color: #007bff; /* Link color */
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .footer a:hover {
+        color: #ffffff; /* Lighter color on hover */
+      }
+      .footer .social-icons a {
+        font-size: 1.5rem; /* Size of the icons */
+        margin: 0 10px;
+        color: white; /* Icon color */
+        transition: color 0.3s ease;
+      }
+      .footer .social-icons a:hover {
+        color: #007bff; /* Change color on hover */
+      }
     </style>
   </head>
   <body>
-    <!-- Navbar -->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm"
     >
@@ -79,31 +155,40 @@
               <a class="nav-link smooth-scroll" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" href="#appDemo">Enterprise Web App Demo (Work in Progress)</a>
+              <a class="nav-link smooth-scroll" href="#appDemo"
+                >Enterprise Web App Demo (Work in Progress)</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Header -->
     <header class="header">
       <div class="container">
+        <div class="avatar-container">
+          <img src="./Anh.jpg" alt="Your Avatar" class="img-fluid" />
+        </div>
         <h1 class="display-5 fw-bold">Anh Nguyen</h1>
         <p class="lead">Full Stack Developer</p>
       </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container mt-4">
-      <!-- Contact Info -->
       <div class="card-custom">
         <h2 class="section-title">Contact Information</h2>
-        <p><strong>Linkedin:</strong> linkedin.com/in/anh-ntq</p>
+        <p>
+          <strong>
+            <i class="fab fa-linkedin"></i>
+            Linkedin:
+          </strong>
+          <a href="https://www.linkedin.com/in/anh-ntq/"
+            >linkedin.com/in/anh-ntq</a
+          >
+        </p>
         <p><strong>Location:</strong> Harrisburg, PA</p>
       </div>
 
-      <!-- Education -->
       <div id="education" class="card-custom">
         <h2 class="section-title">Education</h2>
         <ul>
@@ -125,7 +210,6 @@
         </ul>
       </div>
 
-      <!-- Skills -->
       <div id="skills" class="card-custom">
         <h2 class="section-title">Technical Skills</h2>
         <ul class="skills-list">
@@ -145,7 +229,6 @@
         </ul>
       </div>
 
-      <!-- Experience -->
       <div id="experience" class="card-custom">
         <h2 class="section-title">Professional Experience</h2>
 
@@ -163,7 +246,7 @@
 
         <div class="mb-3">
           <h5 class="fw-bold mb-1">Amazon - Learning Ambassador</h5>
-          <small><em>November 2020 – August 2022</em></small>
+          <small><em>November 2020 – August 2022</small></em>
           <ul>
             <li>Trained and mentored new employees in key warehouse tasks.</li>
             <li>
@@ -174,7 +257,7 @@
 
         <div class="mb-3">
           <h5 class="fw-bold mb-1">Mankichi Software - Software Engineer</h5>
-          <small><em>July 2010 – March 2017</em></small>
+          <small><em>July 2010 – March 2017</small></em>
           <ul>
             <li>
               Developed HR and Sales Management software for Japanese firms.
@@ -188,7 +271,7 @@
 
         <div class="mb-3">
           <h5 class="fw-bold mb-1">HQSoft - Software Engineer</h5>
-          <small><em>May 2007 – July 2010</em></small>
+          <small><em>May 2007 – July 2010</small></em>
           <ul>
             <li>
               Built Accounting and Sales software for major clients like NYK
@@ -199,7 +282,6 @@
         </div>
       </div>
 
-      <!-- Projects -->
       <div id="projects" class="card-custom">
         <h2 class="section-title">Projects</h2>
         <ul class="projects-list">
@@ -218,41 +300,79 @@
         </ul>
       </div>
 
-      <!-- Contact -->
       <div id="contact" class="card-custom">
         <h2 class="section-title">Let's Connect</h2>
         <p>
           If you're interested in collaboration or hiring, feel free to reach
           out!
         </p>
-        <p class="mb-0">
-          <strong>Email:</strong>
-          <a href="linkedin.com/in/anh-ntq">linkedin.com/in/anh-ntq</a>
+
+        <div class="contact-form-group">
+          <label for="messageContent" class="form-label"
+            >Your message:</label
+          >
+          <textarea
+            class="contact-textarea"
+            id="messageContent"
+            placeholder="Type your message here..."
+          ></textarea>
+        </div>
+        <button class="btn-send-email" onclick="sendEmail()">
+          Send Email
+        </button>
+
+        <p class="mt-3 mb-0">
+          <strong>
+            <i class="fab fa-linkedin"></i>
+            Linkedin:
+          </strong>
+          <a href="https://www.linkedin.com/in/anh-ntq/"
+            >linkedin.com/in/anh-ntq</a
+          >
         </p>
       </div>
 
-       <!-- Web App Demo Section -->
       <div id="appDemo" class="card-custom">
         <h2 class="section-title">WebApp Demo</h2>
-        <p><strong>Project:</strong> MERP – Modular ERP Platform</p>
-<p><strong>Technologies:</strong> ReactJS + Material UI (Frontend), ASP.NET Core Web API + SQL Server (Backend)</p>
-<p><strong>Description:</strong></p>
-<ul>
-<li>Building an enterprise-grade HR, Timekeeping, and Payroll management system</li>
-<li>Architecture includes modular front-end (React + MUI) and scalable backend API (.NET 8)</li>
-<li>Uses Stored Procedures for high-performance database operations</li>
-</ul>
-<p><em>Note: This project is currently under development and not yet publicly available.</em></p>
+        <p><strong>Project:</strong> IWHR – IntelliWork for Human Resource</p>
+        <p>
+          <strong>Technologies:</strong> ReactJS + Material UI (Frontend),
+          ASP.NET Core Web API + SQL Server (Backend)
+        </p>
+        <p><strong>Description:</strong></p>
+        <ul>
+          <li>
+            Building an enterprise-grade HR, Timekeeping, and Payroll management
+            system
+          </li>
+          <li>
+            Architecture includes modular front-end (React + MUI) and scalable
+            backend API (.NET 8)
+          </li>
+          <li>
+            Uses Stored Procedures for high-performance database operations
+          </li>
+        </ul>
+        <p>
+          <em
+            >Note: This project is currently under development and not yet
+            publicly available.</em
+          >
+        </p>
       </div>
-
-        
-
-      
     </main>
 
+    <footer class="footer">
+      <div class="container">
+        <p class="mb-1">&copy; 2025 Anh Nguyen. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/anh-ntq/" target="_blank" title="My LinkedIn Profile">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          </div>
+      </div>
+    </footer>
 
-
-    <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.querySelectorAll(".smooth-scroll").forEach((anchor) => {
@@ -263,6 +383,24 @@
           });
         });
       });
+
+      // JavaScript function to send email
+      function sendEmail() {
+        const emailAddress = "anhntq.us@gmail.com";
+        const subject = "Message from your CV website";
+        const message = document.getElementById("messageContent").value;
+
+        // Encode the message to ensure special characters are handled correctly in the URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // Create the mailto link
+        const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodedMessage}`;
+
+        // Open the user's default email client
+        window.location.href = mailtoLink;
+      }
     </script>
   </body>
 </html>
